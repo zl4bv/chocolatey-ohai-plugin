@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows-2012r2
+    driver:
+      box: mwrock/Windows2012R2
+      gui: false
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chocolatey]
+      - recipe[chocolatey-ohai-plugin]
+      - recipe[chocolatey-test]
