@@ -1,4 +1,6 @@
 # chocolatey-ohai-plugin
+[![Build status](https://ci.appveyor.com/api/projects/status/1uufhsayaglup208/branch/master?svg=true)](https://ci.appveyor.com/project/zl4bv/chocolatey-ohai-plugin/branch/master)
+
 [Ohai](https://github.com/chef/ohai) plugin to discover installed [Chocolatey](https://chocolatey.org/) packages.
 
 ## Requirements

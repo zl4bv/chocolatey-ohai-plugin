@@ -4,4 +4,5 @@ end
 
 file 'C:/node.json' do
   content lazy { node.to_json }
+  sensitive true
 end

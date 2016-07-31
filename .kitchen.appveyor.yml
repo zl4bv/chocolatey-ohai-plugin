@@ -13,6 +13,9 @@ provisioner:
 platforms:
 - name: windows-2012R2
 
+verifier:
+  name: inspec
+
 suites:
   - name: default
     run_list:
