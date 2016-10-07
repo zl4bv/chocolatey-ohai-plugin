@@ -11,8 +11,8 @@ Ohai.plugin(:Chocolatey) do
   def chocolatey_packages
     so = shell_out('choco list -l')
     lines = so.stdout.split("\n")
-    lines.reject! { |line| /^Chocolatey v/ === line }
-    lines.reject! { |line| /^\d+ packages installed/ === line }
+    lines.reject! { |line| /^Chocolatey v/ =~ line }
+    lines.reject! { |line| /^\d+ packages installed/ =~ line }
     pkgs = {}
     lines.map! do |line|
       parts = line.strip.split(' ')
