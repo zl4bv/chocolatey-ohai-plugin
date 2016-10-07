@@ -36,3 +36,6 @@ build_script:
 
 test_script:
   - bundle exec kitchen verify
+
+artifacts:
+  - path: .kitchen\logs\kitchen.log
