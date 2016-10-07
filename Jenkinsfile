@@ -25,6 +25,7 @@ node {
 stage "Integration tests"
 
 node {
+    sh "vagrant plugin list | grep vagrant-winrm || vagrant plugin install vagrant-winrm"
     chef_exec "kitchen test"
 }
 
